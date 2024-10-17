@@ -2,11 +2,9 @@ package com.example.bibiliotecaoracle.repository;
 
 import java.util.List;
 
+import com.example.bibiliotecaoracle.entity.Autor;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-
-import com.example.sysbiblioteca.entity.Autor;
-
 public interface AutorRepository extends JpaRepository<Autor, Long>{
 	
 	@Query(value = "SELECT u FROM Autor u WHERE u.nombres = ?1", nativeQuery = true)
